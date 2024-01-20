@@ -14,7 +14,7 @@ def create(request):
     user_input ={ "pic_keywords": pic_keywords,"display_keywords": display_keywords,"reverse": reverse,"titlebar": titlebar}
 
 
-    response =requests.post('http://3.24.216.3/videoapi/createvideo/',data=user_input)
+    response =requests.post('http://3.24.216.3:9200/videoapi/createvideo/',data=user_input)
     if response.ok:
       response =response.json()
       video_title = response['title']
